@@ -21,8 +21,8 @@
 # include <X11/keysym.h>
 # include "minilibx-linux/mlx.h"
 
-# define WIDTH	1500
-# define HEIGHT	1500
+# define WIDTH	1200
+# define HEIGHT	1200
 
 # define DARK_PINK  0xC71585
 # define YELLOW 0xFFF078
