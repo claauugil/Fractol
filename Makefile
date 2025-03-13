@@ -6,7 +6,7 @@ SRCS= errors.c \
 	  rendering.c \
 	  str_utils.c \
 	  validate_input.c \
-	  burning_ship.c \
+	  tricorn.c \
 
 NAME = fractol
 CC = cc
