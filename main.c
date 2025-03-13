@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main .c                                            :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-03-13 11:03:15 by cgil              #+#    #+#             */
-/*   Updated: 2025-03-13 11:03:15 by cgil             ###   ########.fr       */
+/*   Created: 2025/03/13 11:03:15 by cgil              #+#    #+#             */
+/*   Updated: 2025/03/13 18:33:23 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ int	main(int ac, char **av)
 {
 	t_fractal	fractal;
 
-	if ((ac == 2 && !ft_strncmp(av[1], "mandelbrot", 10))
+	if ((ac == 2 && (!ft_strncmp(av[1], "mandelbrot", 10)
+			|| !ft_strncmp(av[1], "tricorn", 6)))
 		|| (ac == 4 && !ft_strncmp(av[1], "julia", 5)))
 	{
 		fractal.name = av[1];
@@ -35,6 +36,7 @@ int	main(int ac, char **av)
 		print_error();
 	}
 }
+
 
 void	validate_input(char *av1, char *av2)
 {

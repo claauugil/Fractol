@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/18 18:24:56 by claudia          ###   ########.fr       */
+/*   Updated: 2025/03/13 18:33:44 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@
 # include <X11/keysym.h>
 # include "minilibx-linux/mlx.h"
 
-# define WIDTH	1200
-# define HEIGHT	1200
+# define WIDTH	500
+# define HEIGHT	500
 
 # define DARK_PINK  0xC71585
 # define YELLOW 0xFFF078
@@ -74,4 +74,7 @@ int			close_handler(t_fractal *fractal);
 int			mouse_handler(int button, int x, int y, t_fractal *fractal);
 double		ft_atodbl(char *s);
 int			tracking_julia(int x, int y, t_fractal *fractal);
+//t_complex_n	burning_ship_iteration(t_complex_n z, t_complex_n c);
+t_complex_n	tricorn_iteration(t_complex_n z, t_complex_n c);
+
 #endif
