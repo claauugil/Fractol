@@ -1,10 +1,11 @@
 SRCS= errors.c \
+	  main.c \
 	  event_handler.c \
-	  fractol.c \
 	  init.c \
 	  math_utils.c \
 	  rendering.c \
 	  str_utils.c \
+	  validate_input.c \
 
 NAME = fractol
 

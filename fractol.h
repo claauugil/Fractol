@@ -59,6 +59,8 @@ typedef struct s_complex_n
 }			t_complex_n;
 
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
+int			check_double(char *av);
+void		validate_input(char *arg1, char *arg2);
 void		print_error(void);
 void		malloc_error(void);
 void		fractal_init(t_fractal *fractal);

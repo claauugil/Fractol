@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fractol.c                                          :+:      :+:    :+:   */
+/*   main .c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
+/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 12:17:06 by cgil              #+#    #+#             */
-/*   Updated: 2025/01/17 17:51:26 by claudia          ###   ########.fr       */
+/*   Created: 2025-03-13 11:03:15 by cgil              #+#    #+#             */
+/*   Updated: 2025-03-13 11:03:15 by cgil             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ int	main(int ac, char **av)
 		fractal.name = av[1];
 		if (!ft_strncmp(fractal.name, "julia", 5))
 		{
+			validate_input(av[2], av[3]);
 			fractal.julia_x = ft_atodbl(av[2]);
 			fractal.julia_y = ft_atodbl(av[3]);
 		}
@@ -33,4 +34,10 @@ int	main(int ac, char **av)
 	{
 		print_error();
 	}
+}
+
+void	validate_input(char *av1, char *av2)
+{
+	if (!check_double(av1) || !check_double(av2))
+		print_error();
 }
