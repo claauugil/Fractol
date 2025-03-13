@@ -40,7 +40,7 @@ clean:
 	@rm -f $(OBJS)
 	@echo "cleaned"
 fclean:
-	@rm -f $(NAME)
+	@rm -f $(OBJS) $(NAME)
 	@echo "fully clean"
 re: fclean all
 
