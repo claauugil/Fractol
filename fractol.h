@@ -21,8 +21,8 @@
 # include <X11/keysym.h>
 # include "minilibx-linux/mlx.h"
 
-# define WIDTH	500
-# define HEIGHT	500
+# define WIDTH	800
+# define HEIGHT	800
 
 # define DARK_PINK  0xC71585
 # define YELLOW 0xFFF078
@@ -60,7 +60,6 @@ typedef struct s_complex_n
 
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			check_double(char *av);
-void		validate_input(char *arg1, char *arg2);
 void		print_error(void);
 void		malloc_error(void);
 void		fractal_init(t_fractal *fractal);
@@ -73,7 +72,6 @@ int			key_handler(int keysym, t_fractal *fractal);
 int			close_handler(t_fractal *fractal);
 int			mouse_handler(int button, int x, int y, t_fractal *fractal);
 double		ft_atodbl(char *s);
-//int			tracking_julia(int x, int y, t_fractal *fractal);
 t_complex_n	tricorn_iteration(t_complex_n z, t_complex_n c);
-t_complex_n	burning_ship_iteration(t_complex_n z, t_complex_n c);
+
 #endif

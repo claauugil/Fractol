@@ -34,50 +34,6 @@ static void	mandel_julia(t_complex_n *z, t_complex_n *c, t_fractal *fractal)
 	}
 }
 
-void	handle_pixel(int x, int y, t_fractal *fractal)
-{
-	t_complex_n	z;
-	t_complex_n	c;
-	int			i;
-	int			color;
-
-	i = 0;
-	z.x = (mapping(x, -2, +2, WIDTH) * fractal->zoom) + fractal->shift_x;
-	z.y = (mapping(y, -2, +2, HEIGHT) * fractal->zoom) + fractal->shift_y;
-
-	if (!ft_strncmp(fractal->name, "burningship", 11))
-		c = z;
-	else
-		mandel_julia(&z, &c, fractal);
-
-	while (i < fractal->iterations_def)
-	{
-		if (!ft_strncmp(fractal->name, "burningship", 11))
-			z = burning_ship_iteration(z, c);
-		else
-			z = sum_complex(square_complex(z), c);
-
-		if ((z.x * z.x) + (z.y * z.y) > fractal->scape_value)
-		{
-			color = mapping(i, DARK_PINK, YELLOW, fractal->iterations_def);
-			my_pixel_put(x, y, &fractal->img, color);
-			return ;
-		}
-		++i;
-	}
-	my_pixel_put(x, y, &fractal->img, PURPLE);
-}
-
-t_complex_n	burning_ship_iteration(t_complex_n z, t_complex_n c)
-{
-	t_complex_n	new_z;
-
-	new_z.x = (z.x * z.x) - (z.y * z.y) + c.x;
-    new_z.y = (2 * fabs(z.x) * fabs(z.y)) + c.y;
-	return (new_z);
-}
-
-/*
 static int	compute_fractal(t_complex_n z, t_fractal *fractal)
 {
 	t_complex_n	c;
@@ -115,7 +71,7 @@ static void	handle_pixel(int x, int y, t_fractal *fractal)
 	else
 		color = PURPLE;
 	my_pixel_put(x, y, &fractal->img, color);
-}*/
+}
 
 void	fractal_render(t_fractal *fractal)
 {

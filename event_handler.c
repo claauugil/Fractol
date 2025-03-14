@@ -43,25 +43,25 @@ int	key_handler(int keysym, t_fractal *fractal)
 
 int	mouse_handler(int button, int x, int y, t_fractal *fractal)
 {
-	(void)x;
-	(void)y;
-	if (button == Button4)
-		fractal->zoom *= 0.95;
-	else if (button == Button5)
-		fractal->zoom *= 1.05;
+	double	prev_zoom;
+	double	new_zoom;
+	double	complex_x;
+	double	complex_y;
+
+	prev_zoom = fractal->zoom;
+	if (button == Button5)
+		new_zoom = fractal->zoom * 0.95;
+	else if (button == Button4)
+		new_zoom = fractal->zoom * 1.05;
+	else
+		return (0);
+	complex_x = (mapping(x, -2, +2, WIDTH) * prev_zoom) + fractal->shift_x;
+	complex_y = (mapping(y, +2, -2, HEIGHT) * prev_zoom) + fractal->shift_y;
+	fractal->shift_x += (complex_x - ((mapping(x, -2, +2, WIDTH) * new_zoom)
+				+ fractal->shift_x));
+	fractal->shift_y += (complex_y - ((mapping(y, +2, -2, HEIGHT) * new_zoom)
+				+ fractal->shift_y));
+	fractal->zoom = new_zoom;
 	fractal_render(fractal);
 	return (0);
 }
-
-/*int	tracking_julia(int x, int y, t_fractal *fractal)
-{
-	if (!ft_strncmp(fractal->name, "julia", 5))
-	{
-		fractal->julia_x = (mapping (x, -2, +2, WIDTH)
-				* fractal->zoom) + fractal->shift_x;
-		fractal->julia_y = (mapping (y, +2, -2, HEIGHT)
-				* fractal->zoom) + fractal->shift_y;
-		fractal_render(fractal);
-	}
-	return (0);
-}*/
