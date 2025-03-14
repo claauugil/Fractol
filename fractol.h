@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/03/14 12:12:05 by claudia          ###   ########.fr       */
+/*   Updated: 2025/03/14 16:12:32 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,9 @@
 
 # define WIDTH	800
 # define HEIGHT	800
-
-# define DARK_PINK  0xC71585
-# define YELLOW 0xFFF078
-# define PURPLE 0x6528F7
+# define DARK_PINK 0xFFFFFF
+# define YELLOW 0x000000
+# define PURPLE 0x8A2BE2
 
 typedef struct s_image
 {
