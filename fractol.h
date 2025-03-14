@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 15:46:05 by cgil              #+#    #+#             */
-/*   Updated: 2025/03/13 18:33:44 by claudia          ###   ########.fr       */
+/*   Updated: 2025/03/14 12:12:05 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,8 +73,7 @@ int			key_handler(int keysym, t_fractal *fractal);
 int			close_handler(t_fractal *fractal);
 int			mouse_handler(int button, int x, int y, t_fractal *fractal);
 double		ft_atodbl(char *s);
-int			tracking_julia(int x, int y, t_fractal *fractal);
-//t_complex_n	burning_ship_iteration(t_complex_n z, t_complex_n c);
+//int			tracking_julia(int x, int y, t_fractal *fractal);
 t_complex_n	tricorn_iteration(t_complex_n z, t_complex_n c);
-
+t_complex_n	burning_ship_iteration(t_complex_n z, t_complex_n c);
 #endif

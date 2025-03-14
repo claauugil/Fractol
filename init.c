@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: cgil <cgil@student.42madrid.com>           #+#  +:+       +#+        */
+/*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025-01-21 12:09:21 by cgil              #+#    #+#             */
-/*   Updated: 2025-01-21 12:09:21 by cgil             ###   ########.fr       */
+/*   Created: 2025/01/21 12:09:21 by cgil              #+#    #+#             */
+/*   Updated: 2025/03/14 12:03:04 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,11 +38,11 @@ static void	events_init(t_fractal *fractal)
 		StructureNotifyMask,
 		close_handler,
 		fractal);
-	mlx_hook(fractal->mlx_new_window,
+	/*mlx_hook(fractal->mlx_new_window,
 		MotionNotify,
 		PointerMotionMask,
 		tracking_julia,
-		fractal);
+		fractal);*/
 }
 
 void	fractal_init(t_fractal *fractal)

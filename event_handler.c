@@ -6,7 +6,7 @@
 /*   By: claudia <claudia@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/18 15:58:59 by claudia           #+#    #+#             */
-/*   Updated: 2025/01/18 18:38:21 by claudia          ###   ########.fr       */
+/*   Updated: 2025/03/14 12:02:29 by claudia          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ int	mouse_handler(int button, int x, int y, t_fractal *fractal)
 	return (0);
 }
 
-int	tracking_julia(int x, int y, t_fractal *fractal)
+/*int	tracking_julia(int x, int y, t_fractal *fractal)
 {
 	if (!ft_strncmp(fractal->name, "julia", 5))
 	{
@@ -64,4 +64,4 @@ int	tracking_julia(int x, int y, t_fractal *fractal)
 		fractal_render(fractal);
 	}
 	return (0);
-}
+}*/
