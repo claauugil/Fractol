@@ -13,11 +13,18 @@ Un **fractal** es una figura geométrica compleja que muestra auto-similitud a d
   z_{n+1} = z_n^2 + c
   \]
   comenzando con \( z_0 = 0 \). Si la secuencia permanece acotada, el punto pertenece al conjunto.
+  
+   ![Mandelbrot](media/mandelbrot.png)
 
 - **Conjunto de Julia**: utiliza la misma fórmula, pero con un número complejo fijo \( c \), mientras se varía el valor inicial \( z_0 \). Diferentes valores de \( c \) generan distintos patrones fractales.
+
+  ![Julia](media/julia.png)
+  
 - **Conjunto de Tricorn**: variante del Mandelbrot que usa la fórmula  
   `zₙ₊₁ = conj(zₙ)² + c`  
   (conjugado complejo de `z`), lo que genera una simetría distintiva y patrones más puntiagudos.
+  
+   ![Tricorn](media/tricorn.png)
 ---
 
 ## ✨ Características Principales
