@@ -15,7 +15,9 @@ Un **fractal** es una figura geométrica compleja que muestra auto-similitud a d
   comenzando con \( z_0 = 0 \). Si la secuencia permanece acotada, el punto pertenece al conjunto.
 
 - **Conjunto de Julia**: utiliza la misma fórmula, pero con un número complejo fijo \( c \), mientras se varía el valor inicial \( z_0 \). Diferentes valores de \( c \) generan distintos patrones fractales.
-
+- **Conjunto de Tricorn**: variante del Mandelbrot que usa la fórmula  
+  `zₙ₊₁ = conj(zₙ)² + c`  
+  (conjugado complejo de `z`), lo que genera una simetría distintiva y patrones más puntiagudos.
 ---
 
 ## ✨ Características Principales
@@ -23,6 +25,7 @@ Un **fractal** es una figura geométrica compleja que muestra auto-similitud a d
 - ✅ Soporte para fractales:
   - **Mandelbrot**
   - **Julia** (con parámetros personalizados)
+  -  **Tricorn** (*bonus* )
   
 - 🔍 **Zoom interactivo** usando la rueda del ratón
 
@@ -53,6 +56,7 @@ Un **fractal** es una figura geométrica compleja que muestra auto-similitud a d
 - `fractal_type`: Tipo de fractal a mostrar. Opciones:
   - `Mandelbrot`
   - `Julia`
+  - Tricorn
   
 - `[options]`: Solo para Julia. Dos números reales que representan las partes real e imaginaria de la constante \( c \). Ejemplo:
   - `./fractal Julia -0.7 0.27015`
@@ -79,4 +83,9 @@ make
 ./fractal Julia -0.7 0.27015
 ```
 
+### ▶️ Ejecutar Tricorn
+
+```bash
+./fractal Tricorn
+```
 ---
